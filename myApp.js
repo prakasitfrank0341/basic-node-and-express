@@ -29,9 +29,16 @@ app.get("/json", function(req, res) {
     }
   });
 
+function getCurrentTimeString() {
+    return new Date().toString();
+}
 
-
-
+app.get("/now", function(req, res, next) {
+    req.time = getCurrentTimeString();
+    next();
+}, function(req, res) {
+    res.json({time: req.time});
+});
 
 
 
