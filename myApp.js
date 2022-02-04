@@ -19,7 +19,7 @@ app.get("/json", function(req, res) {
       )
     }else {
       res.json(
-        {"message": "hello json"}
+        {"message": "Hello json"}
       )
     }
   });
